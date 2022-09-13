@@ -1,5 +1,6 @@
 import { StatusBar } from 'expo-status-bar';
 import {
+	Alert,
 	FlatList,
 	SafeAreaView,
 	StyleSheet,
@@ -36,6 +37,7 @@ export default function App() {
 			setLoading(false);
 		} catch (error) {
 			console.log({ error });
+			setError('Something went wront, please try again');
 			setLoading(false);
 		}
 	};
@@ -121,6 +123,7 @@ export default function App() {
 				<TextWrapper>Rate:</TextWrapper>
 				<TextWrapper>{currentItem?.rate}</TextWrapper>
 			</BottomSheet>
+			{error ? Alert.alert(error) : null}
 		</SafeAreaView>
 	);
 }
@@ -195,7 +198,7 @@ const styles = StyleSheet.create({
 	},
 	safeArea: {
 		flex: 1,
-		marginTop: '20%',
+		marginTop: '10%',
 		marginBottom: '20%',
 	},
 	title: {

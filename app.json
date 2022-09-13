@@ -1,7 +1,7 @@
 {
   "expo": {
-    "name": "coinappy",
-    "slug": "coinappy",
+    "name": "task",
+    "slug": "task",
     "version": "1.0.0",
     "orientation": "portrait",
     "icon": "./assets/icon.png",
@@ -24,10 +24,16 @@
       "adaptiveIcon": {
         "foregroundImage": "./assets/adaptive-icon.png",
         "backgroundColor": "#FFFFFF"
-      }
+      },
+      "package": "com.josephibrahi.task"
     },
     "web": {
       "favicon": "./assets/favicon.png"
+    },
+    "extra": {
+      "eas": {
+        "projectId": "0eeaaacf-349a-41e2-803c-f8dd67b85f87"
+      }
     }
   }
 }
